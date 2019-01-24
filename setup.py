@@ -2,7 +2,7 @@ from shutil import copyfile
 import os
 
 # path to the Deformable-ConvNets
-dst_dir = '../Deformable-ConvNets'
+dst_dir = '../../Deformable-ConvNets'
 
 print "putting files into the right positions ..."
 #install codes of inference pipeline to output detection .txt files one per image
