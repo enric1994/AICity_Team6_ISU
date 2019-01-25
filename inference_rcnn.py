@@ -213,7 +213,7 @@ def inference_rcnn_AICity(cfg, dataset, image_set, root_path, dataset_path,
     print 'test_data.provide_label:',test_data.provide_label
     nnn = 0
     #classes = ['__background','vehicle']
-    classes = ['Car','SUV','SmallTruck','MediumTruck','LargeTruck','Pedestrian','Bus','Van','GroupOfPeople','Bicycle', 'Motorcycle','TrafficSignal-Green', 'TrafficSignal-Yellow', 'TrafficSignal-Red']
+    classes = ['Car','SUV','SmallTruck','MediumTruck','LargeTruck','Pedestrian','Bus','Van','GroupOfPeople','Bicycle', 'Motorcycle']
     #,'Pedestrian', 'GroupOfPeople','Bicycle', 'Motorcycle','TrafficSignal-Green', 'TrafficSignal-Yellow', 'TrafficSignal-Red'
     for im_info, data_batch in test_data:
         print nnn
