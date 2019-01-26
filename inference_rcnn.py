@@ -249,7 +249,8 @@ def inference_rcnn_AICity(cfg, dataset, image_set, root_path, dataset_path,
         if not os.path.exists(os.path.join('data', 'output')):
             os.makedirs(os.path.join('data', 'output'))
         
-        output_file = os.path.join('data', 'output', image_name_lean+ '.txt')
+	import datetime,time
+        output_file = os.path.join('data', 'output', str(datetime.datetime.fromtimestamp(time.time()).strftime('%Y-%m-%d %H:%M:%S')) + '.txt')
         
         thefile = open(output_file,'a')
         
@@ -261,5 +262,5 @@ def inference_rcnn_AICity(cfg, dataset, image_set, root_path, dataset_path,
             cls_dets = dets_nms[cls_idx]
             for x_small,y_small,x_large,y_large,prob in cls_dets:
                 thefile.write(cls_name+' '+str(x_small)+' '+str(y_small)+' '+str(max(x_small+0.01,x_large))+' '+str(max(y_small+0.01,y_large))+' '+str(prob)+'\n')
-
-
+        thefile.write("----next frame----")
+	
